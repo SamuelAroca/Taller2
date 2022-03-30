@@ -173,7 +173,7 @@ public class Taller2 extends JFrame{
     }//{}[]()
 
     public static boolean validarPlaca(String placa) {
-        return placa.matches("^[A-Za-z]{3}[0-9]{3}$");
+        return placa.matches("^[A-Za-z]{3}[0-9]{2}[A-za-z0-9]{1}$");
     }
     public static boolean validarCosas(String marca) {
         return marca.matches("^([A-Za-z]+[ ]?){1,2}$");
