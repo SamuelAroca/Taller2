@@ -7,6 +7,7 @@ import java.awt.event.FocusEvent;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class Taller2 extends JFrame{
     private JPanel mainPanel;
@@ -69,8 +70,14 @@ public class Taller2 extends JFrame{
         textFieldPlaca.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                if (!validarPlaca(textFieldPlaca.getText())) {
-                    JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
+                if (Objects.equals(comboBoxTipo.getSelectedItem(), "Carro")) {
+                    if (!validarPlacaCarro(textFieldPlaca.getText())) {
+                        JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
+                    }
+                } else if (Objects.equals(comboBoxTipo.getSelectedItem(), "Moto")) {
+                    if (!validarPlacaMoto(textFieldPlaca.getText())) {
+                        JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
+                    }
                 }
             }
         });
@@ -127,7 +134,7 @@ public class Taller2 extends JFrame{
         textFieldMarca.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                if (!validarCosas(textFieldMarca.getText())) {
+                if (validarCosas(textFieldMarca.getText())) {
                     JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
                 }
             }
@@ -135,7 +142,7 @@ public class Taller2 extends JFrame{
         textFieldModelo.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                if (!validarCosas(textFieldModelo.getText())) {
+                if (validarCosas(textFieldModelo.getText())) {
                     JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
                 }
             }
@@ -172,11 +179,15 @@ public class Taller2 extends JFrame{
         return nombre.matches("^([A-Z]{1}[a-z]+[ ]?){1,2}$");
     }//{}[]()
 
-    public static boolean validarPlaca(String placa) {
-        return placa.matches("^[A-Za-z]{3}[0-9]{2}[A-za-z0-9]{1}$");
+    public static boolean validarPlacaCarro(String placa) {
+        return placa.matches("^[A-Za-z]{3}[0-9]{3}$");
+    }
+
+    public static boolean validarPlacaMoto(String placa) {
+        return placa.matches("^[A-Za-z]{3}[0-9]{2}[A-za-z]{1}$");
     }
     public static boolean validarCosas(String marca) {
-        return marca.matches("^([A-Za-z]+[ ]?){1,2}$");
+        return !marca.matches("^([A-Za-z]+[ ]?){1,2}$");
     }
     public static boolean validarTarifa(String tarifa) {
         return tarifa.matches("^([1-9]{1}[0-9]+[ ]?){1,2}$");
