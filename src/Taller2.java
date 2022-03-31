@@ -1,13 +1,9 @@
+//By Samuel Aroca
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Objects;
+import java.awt.event.*;
+import java.text.*;
+import java.util.*;
 
 public class Taller2 extends JFrame{
     private JPanel mainPanel;
@@ -34,8 +30,10 @@ public class Taller2 extends JFrame{
     private JButton buttonSalir;
 
     public Taller2() {
+        setTitle("Taller 2 By Samuel Aroca");
         setContentPane(mainPanel);
-
+        //Todos los listeners
+            //Fecha
         textFieldFecha.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -44,6 +42,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Hora de ingreso
         textFieldHoraIngre.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -52,6 +51,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Salir del programa
         buttonSalir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -59,6 +59,7 @@ public class Taller2 extends JFrame{
                 System.exit(0);
             }
         });
+        //Nombre
         textFieldNombre.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -67,6 +68,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Placa
         textFieldPlaca.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -81,6 +83,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Boton Calcular la hora de diferencia y otras cosas
         buttonCalcular.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -109,7 +112,7 @@ public class Taller2 extends JFrame{
                 double tarifa = Double.parseDouble(textTarifa.getText());
 
                 double total = tiempotranscurrido*tarifa;
-
+                //Lo que se le muestra al usuario
                 if (!textFieldNombre.getText().isEmpty() && !textFieldMarca.getText().isEmpty()
                         && !textFieldModelo.getText().isEmpty() && !textFieldPlaca.getText().isEmpty()
                         && !textFieldFecha.getText().isEmpty() && !textFieldHoraIngre.getText().isEmpty()
@@ -123,6 +126,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Hora salida
         textSalida.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -131,6 +135,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Marca
         textFieldMarca.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -139,6 +144,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Modelo
         textFieldModelo.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -147,6 +153,7 @@ public class Taller2 extends JFrame{
                 }
             }
         });
+        //Tarifa
         textTarifa.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
@@ -156,7 +163,7 @@ public class Taller2 extends JFrame{
             }
         });
     }
-
+    //Valida formato fecha
     private static boolean isValidFormat(String date) {
         Date myDate = null;
         try {
@@ -174,25 +181,27 @@ public class Taller2 extends JFrame{
             return true;
         }
     }
-
+    //Valida nombre
     public static boolean validarNombre(String nombre) {
         return nombre.matches("^([A-Z]{1}[a-z]+[ ]?){1,2}$");
     }//{}[]()
-
+    //Valida placa para carro
     public static boolean validarPlacaCarro(String placa) {
         return placa.matches("^[A-Za-z]{3}[0-9]{3}$");
     }
-
+    //Valida placa para moto
     public static boolean validarPlacaMoto(String placa) {
         return placa.matches("^[A-Za-z]{3}[0-9]{2}[A-za-z]{1}$");
     }
+    //Valida cosas
     public static boolean validarCosas(String marca) {
         return !marca.matches("^([A-Za-z]+[ ]?){1,2}$");
     }
+    //valida la tarifa
     public static boolean validarTarifa(String tarifa) {
         return tarifa.matches("^([1-9]{1}[0-9]+[ ]?){1,2}$");
     }
-
+    //Valida la hora
     public static boolean validarHora(String hora) {
         Date myTime = null;
         try {

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40ed0a0e-d7e0-4263-90f6-ac4a538d59b4" name="Changes" comment="">
+    <list default="true" id="ea103695-2966-40f4-8d32-f2f2281583b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Elmain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Taller2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Taller2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="275SzmqyPBwCSgYRq3Ls1dtDt0z" />
+  <component name="ProjectId" id="26oLVsStDArRxTCFmwa5Wp6jN2s" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -31,15 +43,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Descargas/cl05/cl05" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration name="ElMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ElMain" />
+    <configuration name="Elmain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Elmain" />
       <module name="Taller2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -47,41 +63,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ElMain" />
+        <item itemvalue="Application.Elmain" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="40ed0a0e-d7e0-4263-90f6-ac4a538d59b4" name="Changes" comment="" />
-      <created>1648608721237</created>
+      <changelist id="ea103695-2966-40f4-8d32-f2f2281583b7" name="Changes" comment="" />
+      <created>1648085021537</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648608721237</updated>
+      <updated>1648085021537</updated>
     </task>
-    <task id="LOCAL-00001" summary="Taller 2">
-      <created>1648612773551</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1648612773551</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Deberia estar terminado">
-      <created>1648621280848</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1648621280848</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Correcion placas">
-      <created>1648674519863</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1648674519863</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,12 +90,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
-    <MESSAGE value="Taller 2" />
-    <MESSAGE value="Deberia estar terminado" />
-    <MESSAGE value="Correcion placas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcion placas" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
