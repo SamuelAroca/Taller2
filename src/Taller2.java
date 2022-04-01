@@ -28,6 +28,8 @@ public class Taller2 extends JFrame{
     private JTextField textTarifa;
     private JButton buttonCalcular;
     private JButton buttonSalir;
+    private JLabel labelTipoPersona;
+    private JComboBox comboBox1;
 
     public Taller2() {
         setTitle("Taller 2 By Samuel Aroca");
@@ -112,6 +114,11 @@ public class Taller2 extends JFrame{
                 double tarifa = Double.parseDouble(textTarifa.getText());
 
                 double total = tiempotranscurrido*tarifa;
+
+                if (Objects.equals(comboBox1.getSelectedItem(), "Preferencial")) {
+                    double descuento = (total * 10)/100;
+                    total -= descuento;
+                }
                 //Lo que se le muestra al usuario
                 if (!textFieldNombre.getText().isEmpty() && !textFieldMarca.getText().isEmpty()
                         && !textFieldModelo.getText().isEmpty() && !textFieldPlaca.getText().isEmpty()
@@ -157,6 +164,7 @@ public class Taller2 extends JFrame{
         textTarifa.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
+
                 if (!validarTarifa(textTarifa.getText())) {
                     JOptionPane.showMessageDialog(new JFrame(),"El formato no es valido");
                 }
